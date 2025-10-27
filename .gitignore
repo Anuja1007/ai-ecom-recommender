@@ -1,3 +1,11 @@
+# Ignore project data files
+data/
+
+# Standard Python exclusions (should already be here)
+venv/
+*.pyc
+__pycache__/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
