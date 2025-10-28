@@ -1,3 +1,9 @@
 pandas
 jupyter
 numpy
+fastapi
+uvicorn
+# Make sure these are also there from earlier:
+scikit-learn
+scipy
+pandas
