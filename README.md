@@ -1,3 +1,5 @@
+
+
 # ai-ecom-recommender
 _**AI Product Recommender: Full-Stack MLOps Demo**_
 
@@ -24,3 +26,13 @@ Python, Pandas, Scikit-learn, SciPy (CSR Matrix), Pickle
 FastAPI (Python), Uvicorn
 React, Vite, JavaScript
 Docker, GitHub Actions, Render (Free Tier)
+
+
+
+
+
+
+<img width="1365" height="717" alt="Screenshot 2025-10-30 125626" src="https://github.com/user-attachments/assets/1222b85c-a371-4fbb-b8b3-7afd58a8f635" />
+<img width="1365" height="708" alt="Screenshot 2025-10-30 130030" src="https://github.com/user-attachments/assets/0abf1883-d02e-48f3-a50e-eee41f0caad7" />
+<img width="1365" height="714" alt="Screenshot 2025-10-30 131701" src="https://github.com/user-attachments/assets/a34ec9f1-865f-4b0d-8067-2504e32a7a59" />
+<img width="1365" height="713" alt="Screenshot 2025-10-30 131718" src="https://github.com/user-attachments/assets/193dab4d-a6aa-4ec1-9df3-75e40aab4394" />
