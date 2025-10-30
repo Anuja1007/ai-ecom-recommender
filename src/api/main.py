@@ -83,7 +83,8 @@ def get_recommendations(user_id: int, n_recommendations: int = 5):
     # This check now guarantees that 1, 200, and 500 are valid keys.
     if user_id not in user_map:
         raise HTTPException(status_code=404, detail=f"User ID {user_id} not found in user map (Use 1, 200, or 500).")
-
+    
+    print("Available user IDs:", model_data.keys())
     # --- SIMPLIFIED MOCK LOGIC (Final Test Success) ---
     # This mock data is returned only if validation passes.
     mock_recommendations = [12, 45, 88, 102, 11, 23, 7] 
