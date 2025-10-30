@@ -1,30 +1,24 @@
-// /src/frontend/recommender-ui/src/App.jsx
-
 import React, { useState } from 'react';
-import './App.css'; // Keep standard React styling if desired
+import './App.css'; 
 
 // 1. ***CRITICAL: REPLACE WITH YOUR ACTUAL LIVE RENDER URL***
-// Example: https://recommender-api-1234.onrender.com
-const API_BASE_URL = "https://ai-ecom-recommender.onrender.com/"; 
+const API_BASE_URL = "https://ai-ecom-recommender.onrender.com"; // Removed trailing slash
 
-async function App() {
+// Correctly declared as a standard function (not async)
+function App() { 
   const [userId, setUserId] = useState('');
   const [recommendations, setRecommendations] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-const fetchRecommendations = async () => {
-  // --- TEMPORARY MOCK FOR SCREENSHOT ---
-  setLoading(true);
-  setError(null);
+  // Correctly defined fetch function:
+  const fetchRecommendations = async () => {
+    // 1. Basic Client-Side Validation
+    if (!userId || isNaN(parseInt(userId))) {
+      setError("Please enter a valid numeric User ID.");
+      return;
+    }
 
-  // Simulate success after a short delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  setRecommendations([102, 45, 88, 11, 23]); // Mock Data
-  setLoading(false);
-  // --- END MOCK ---
-};
     setLoading(true);
     setError(null);
     setRecommendations(null);
@@ -55,8 +49,9 @@ const fetchRecommendations = async () => {
     } finally {
       setLoading(false);
     }
-  };
+  }; // <-- END OF fetchRecommendations function
 
+  // The return block is the component's output
   return (
     <div className="app-container">
       <h1>🛒 AI Product Recommender </h1>
@@ -97,6 +92,6 @@ const fetchRecommendations = async () => {
       )}
     </div>
   );
-
+}
 
 export default App;
