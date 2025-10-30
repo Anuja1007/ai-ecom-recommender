@@ -7,19 +7,24 @@ import './App.css'; // Keep standard React styling if desired
 // Example: https://recommender-api-1234.onrender.com
 const API_BASE_URL = "https://ai-ecom-recommender.onrender.com/"; 
 
-function App() {
+async function App() {
   const [userId, setUserId] = useState('');
   const [recommendations, setRecommendations] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchRecommendations = async () => {
-    // 1. Basic Client-Side Validation
-    if (!userId || isNaN(parseInt(userId))) {
-      setError("Please enter a valid numeric User ID.");
-      return;
-    }
+const fetchRecommendations = async () => {
+  // --- TEMPORARY MOCK FOR SCREENSHOT ---
+  setLoading(true);
+  setError(null);
 
+  // Simulate success after a short delay
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  setRecommendations([102, 45, 88, 11, 23]); // Mock Data
+  setLoading(false);
+  // --- END MOCK ---
+};
     setLoading(true);
     setError(null);
     setRecommendations(null);
@@ -92,6 +97,6 @@ function App() {
       )}
     </div>
   );
-}
+
 
 export default App;
